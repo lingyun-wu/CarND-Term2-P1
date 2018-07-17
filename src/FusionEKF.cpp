@@ -67,15 +67,15 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
     ekf_.x_ << 1, 1, 1, 1;
 
     //state covariance matrix P
-    kf_.P_ = MatrixXd(4, 4);
-    kf_.P_ << 1, 0, 0, 0,
+    ekf_.P_ = MatrixXd(4, 4);
+    ekf_.P_ << 1, 0, 0, 0,
 	      0, 1, 0, 0,
 	      0, 0, 1000, 0,
 	      0, 0, 0, 1000;
 
     //the initial transition matrix F_
-    kf_.F_ = MatrixXd(4, 4);
-    kf_.F_ << 1, 0, 1, 0,
+    ekf_.F_ = MatrixXd(4, 4);
+    ekf_.F_ << 1, 0, 1, 0,
 	      0, 1, 0, 1,
 	      0, 0, 1, 0,
 	      0, 0, 0, 1;
@@ -132,8 +132,8 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
   ekf_.F_(1, 3) = dt;
 
   //set the acceleration noise components
-  noise_ax = 9;
-  noise_ay = 9;
+  float noise_ax = 9;
+  float noise_ay = 9;
 
   //set the process covariance matrix Q
   ekf_.Q_ = MatrixXd(4, 4);
