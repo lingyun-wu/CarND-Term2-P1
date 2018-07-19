@@ -60,7 +60,7 @@ The simulator provides two data sets.
 
 ![alt text][image2]
 
-
+Output results are [here](https://github.com/lingyun-wu/CarND-Term2-P1/blob/master/output/output_Dataset1.txt)
 
 
 2. Here is the tracking result for data-set 2.
@@ -73,6 +73,8 @@ The simulator provides two data sets.
 | vy       |     0.4932   |
 
 ![alt text][image1]
+
+Output results are [here](https://github.com/lingyun-wu/CarND-Term2-P1/blob/master/output/output_Dataset2.txt)
 
 
 

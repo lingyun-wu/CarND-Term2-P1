@@ -56,11 +56,14 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
     * update the state by using Extended Kalman Filter equations
   */
   
+  // PI value
   float pi = 3.14159265;
 
+  // Convert Cartesian to Polar coordinates
   float rho = sqrt(x_(0)*x_(0)+x_(1)*x_(1));
   float phi = atan2(x_(1), x_(0));
   float rho_dot;
+  // Case of small rho
   if (rho < 0.00001) {
       float px = x_(0) + 0.001;
       float py = x_(1) + 0.001;
@@ -71,11 +74,12 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
       rho_dot = (x_(0)*x_(2)+x_(1)*x_(3))/rho;
   }
 
+  // Predicted z
   VectorXd z_pred(3); 
   z_pred<< rho, phi, rho_dot;
 
+  // make phi difference in the range [-pi, pi]
   VectorXd y = z - z_pred;
-  
   if (y(1) > pi) {
       y(1) -= 2*pi;
   } else if (y(1) < -pi) {
