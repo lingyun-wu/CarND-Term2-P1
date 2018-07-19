@@ -51,7 +51,7 @@ The simulator provides two data sets.
 
 
 | Variable |     RMSE     |
-|:--------:|:------------:|  
+|:--------:|:------------:| 
 | px       |     0.0973   |
 | py       |     0.0855   |
 | vx       |     0.4513   |
