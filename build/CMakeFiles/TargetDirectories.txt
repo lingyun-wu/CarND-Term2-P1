@@ -1,3 +1,0 @@
-/home/lingyun/Github/carnd/term2/CarND-Term2-P1/build/CMakeFiles/edit_cache.dir
-/home/lingyun/Github/carnd/term2/CarND-Term2-P1/build/CMakeFiles/rebuild_cache.dir
-/home/lingyun/Github/carnd/term2/CarND-Term2-P1/build/CMakeFiles/ExtendedKF.dir
