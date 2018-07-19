@@ -1,2 +1,2 @@
- ./build
- ./build_mac
+ /build
+ /build_mac
